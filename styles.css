@@ -568,8 +568,6 @@ img {
 }
 .master-art {
   height: 350px;
-  position: relative;
-  overflow: hidden;
   background: var(--ink);
 }
 .master-art img {
@@ -579,34 +577,6 @@ img {
   object-fit: cover;
   object-position: center 34%;
   filter: grayscale(100%);
-}
-.master-art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, transparent 55%, #0b1726ad);
-}
-.master-art::after {
-  content: "КЛИНОК";
-  position: absolute;
-  z-index: 2;
-  bottom: 20px;
-  left: 24px;
-  color: #fff;
-  font: 600 15px var(--display);
-  letter-spacing: 0.2em;
-  opacity: 0.85;
-}
-.master-art-line {
-  position: absolute;
-  z-index: 2;
-  top: -12%;
-  left: 65%;
-  height: 125%;
-  width: 2px;
-  background: var(--accent);
-  transform: rotate(14deg);
 }
 .master-photo-note {
   margin: 1.25rem 0 0;
