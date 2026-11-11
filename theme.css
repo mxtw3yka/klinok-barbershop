@@ -102,6 +102,7 @@ html[data-theme="light"] .site-footer.footer .footer-links a,
 html[data-theme="light"] .site-footer.footer .footer-contact p,
 html[data-theme="light"] .site-footer.footer .footer-address p,
 html[data-theme="light"] .inner-page .site-footer.footer .footer-contact p { color: #344b5c; }
+html[data-theme="light"] .site-footer .footer-contact-icon { color: #9b5b52; }
 html[data-theme="light"] .site-footer.footer .footer-contact .footer-note,
 html[data-theme="light"] .site-footer.footer .footer-address .footer-note,
 html[data-theme="light"] .inner-page .site-footer.footer .footer-contact .footer-note { color: #536777; }

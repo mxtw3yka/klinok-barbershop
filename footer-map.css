@@ -143,6 +143,23 @@
 .site-footer .footer-contact p a:hover {
   color: #dcaaa2;
 }
+.site-footer .footer-contact .footer-contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.site-footer .footer-contact-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: #dcaaa2;
+}
 .site-footer .footer-visit-card,
 .inner-page .site-footer .footer-visit-card {
   padding: 1.25rem;
