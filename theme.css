@@ -1,0 +1,156 @@
+/* The existing navy/steel design remains the default dark theme. */
+.site-header .theme-toggle {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #637584;
+  background: transparent;
+  color: #e9eeed;
+  cursor: pointer;
+}
+.site-header .theme-toggle:hover { background: #ffffff1a; }
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-toggle-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.theme-moon { display: none; }
+html[data-theme="light"] .theme-sun { display: none; }
+html[data-theme="light"] .theme-moon { display: block; }
+
+html[data-theme="light"] body,
+html[data-theme="light"] body.inner-page { background: #f5f7f6; color: #142438; }
+html[data-theme="light"] .site-header,
+html[data-theme="light"] .inner-page .site-header { background: #f5f7f6; color: #142438; border-bottom-color: #c9d3d6; }
+html[data-theme="light"] .site-header .brand,
+html[data-theme="light"] .inner-page .site-header .brand { color: #142438 !important; }
+html[data-theme="light"] .site-header .brand-mark span,
+html[data-theme="light"] .inner-page .site-header .brand-mark::before { background: #142438; }
+html[data-theme="light"] .site-header .brand-type small { color: #536777; }
+html[data-theme="light"] .site-header .primary-nav .nav-link,
+html[data-theme="light"] .inner-page .site-header .nav-link { color: #455b6a !important; }
+html[data-theme="light"] .site-header .primary-nav .nav-link:hover,
+html[data-theme="light"] .site-header .primary-nav .nav-link.active,
+html[data-theme="light"] .inner-page .site-header .nav-link:hover,
+html[data-theme="light"] .inner-page .site-header .nav-link[aria-current="page"] { color: #142438 !important; }
+html[data-theme="light"] .site-header .header-book,
+html[data-theme="light"] .inner-page .site-header .nav-book { background: #142438; color: #fff; }
+html[data-theme="light"] .site-header .header-book:hover,
+html[data-theme="light"] .inner-page .site-header .nav-book:hover { background: #344e63; color: #fff; }
+html[data-theme="light"] .site-header .theme-toggle { color: #142438; border-color: #a8b6bd; }
+html[data-theme="light"] .site-header .theme-toggle:hover { background: #e3e9e9; }
+html[data-theme="light"] .site-header .navbar-toggler { border-color: #9aabb4; }
+html[data-theme="light"] .site-header .navbar-toggler-icon,
+html[data-theme="light"] .inner-page .site-header .navbar-toggler-icon { filter: brightness(0); }
+
+html[data-theme="light"] .hero { background: #e7ecec; color: #142438; }
+html[data-theme="light"] .hero-shade { background: linear-gradient(90deg, #edf1f1 0%, #edf1f1 29%, #edf1f1eb 43%, #edf1f180 63%, #edf1f10a 100%); }
+html[data-theme="light"] .hero-intro,
+html[data-theme="light"] .hero-description { color: #344b5c; }
+html[data-theme="light"] .hero h1 { text-shadow: none; }
+html[data-theme="light"] .hero h1 span { -webkit-text-stroke-color: #142438; }
+html[data-theme="light"] .hero .button-light { background: #142438; color: #fff; }
+html[data-theme="light"] .hero .button-light:hover { background: #344e63; }
+html[data-theme="light"] .hero-bottom > span:first-child { color: #344b5c; }
+html[data-theme="light"] .hero-bottom > span:last-child { color: #fff; }
+html[data-theme="light"] .hero::after { background: #14243833; }
+
+html[data-theme="light"] .about { background: #f6f8f7; color: #142438; }
+html[data-theme="light"] .about h2 em { color: #647886; }
+html[data-theme="light"] .about-content-inner > p:not(.section-kicker),
+html[data-theme="light"] .about-signature { color: #506576; }
+html[data-theme="light"] .about .text-link { color: #142438; }
+html[data-theme="light"] .works { background: #dfe7e9; color: #142438; }
+html[data-theme="light"] .works .section-heading > p { color: #455b6a; }
+html[data-theme="light"] .booking-panel { background: #f7faf9; color: #142438; border: 1px solid #b6c4c8; }
+html[data-theme="light"] .booking-panel-index { color: #536777; }
+html[data-theme="light"] .booking-panel-mark span { background: #142438; }
+html[data-theme="light"] .booking-panel .button-light { background: #142438; color: #fff; }
+html[data-theme="light"] .booking-panel .button-light:hover { background: #344e63; }
+
+html[data-theme="light"] .inner-page .page-intro { background: #dfe7e9; color: #142438; }
+html[data-theme="light"] .inner-page .page-intro p,
+html[data-theme="light"] .inner-page .intro-aside { color: #455b6a; }
+html[data-theme="light"] .inner-page .intro-aside { border-top-color: #a9b9c1; }
+html[data-theme="light"] .inner-page .featured-service { background: #f8faf9; color: #142438; border: 1px solid #b5c4c9; }
+html[data-theme="light"] .inner-page .featured-copy p { color: #455b6a; }
+
+html[data-theme="light"] .location-section { background: #eef2f1; }
+html[data-theme="light"] .location-grid { background: #f8faf9; color: #142438; border: 1px solid #b5c4c9; }
+html[data-theme="light"] .location-copy p { color: #455b6a; }
+html[data-theme="light"] .location-copy .location-address { color: #142438; border-left-color: var(--accent); }
+html[data-theme="light"] .location-copy a { color: #142438; }
+html[data-theme="light"] .location-copy a:hover { color: #a65c52; }
+html[data-theme="light"] .location-map { background: #c6d2d5; }
+
+html[data-theme="light"] .site-footer.footer .footer-top h2 { color: #142438; }
+html[data-theme="light"] .site-footer.footer .footer-links a,
+html[data-theme="light"] .site-footer.footer .footer-contact p,
+html[data-theme="light"] .site-footer.footer .footer-address p,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-contact p { color: #344b5c; }
+html[data-theme="light"] .site-footer.footer .footer-contact .footer-note,
+html[data-theme="light"] .site-footer.footer .footer-address .footer-note,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-contact .footer-note { color: #536777; }
+html[data-theme="light"] .site-footer.footer .footer-map-link { color: #374f60; }
+html[data-theme="light"] .site-footer.footer .footer-map-link:hover { color: #a65c52; }
+html[data-theme="light"] .site-footer.footer .footer-cta,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-cta { color: #142438; border-color: #9b5b52; }
+html[data-theme="light"] .site-footer.footer .footer-cta:hover { color: #142438; background: #cbd8da; }
+html[data-theme="light"] .site-footer.footer .footer-bottom,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-bottom { border-top-color: #aebfc4; color: #536777; }
+
+html[data-theme="light"] .footer,
+html[data-theme="light"] .inner-page .footer { background: #dce5e7; color: #142438; }
+html[data-theme="light"] .footer .brand,
+html[data-theme="light"] .inner-page .footer .brand { color: #142438 !important; }
+html[data-theme="light"] .footer .brand-mark span,
+html[data-theme="light"] .inner-page .footer .brand-mark::before { background: #142438; }
+html[data-theme="light"] .footer .brand-type small,
+html[data-theme="light"] .footer-top > div:first-child > p,
+html[data-theme="light"] .footer-contact span,
+html[data-theme="light"] .footer-bottom,
+html[data-theme="light"] .inner-page .footer-top p,
+html[data-theme="light"] .inner-page .footer-contact span { color: #536777; }
+html[data-theme="light"] .footer-bottom { border-top-color: #aebfc4; }
+html[data-theme="light"] .footer a:hover,
+html[data-theme="light"] .inner-page .footer a:hover { color: #142438; }
+
+html[data-theme="light"] .site-footer.footer .footer-visit-card,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-visit-card {
+  background: #182b40;
+  border-color: #41586a;
+}
+html[data-theme="light"] .site-footer.footer .footer-visit-card h2,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-visit-card h2 {
+  color: #fff;
+}
+html[data-theme="light"] .site-footer.footer .footer-visit-card p,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-visit-card p {
+  color: #e0e7e9;
+}
+html[data-theme="light"] .site-footer.footer .footer-visit-card .footer-map-link,
+html[data-theme="light"] .site-footer.footer .footer-visit-card .footer-map-link:hover {
+  color: #dcaaa2;
+}
+html[data-theme="light"] .site-footer.footer .footer-visit-card .footer-cta,
+html[data-theme="light"] .site-footer.footer .footer-visit-card .footer-cta:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .site-header .theme-toggle { margin-top: 13px; margin-right: 12px; }
+  html[data-theme="light"] .site-header .navbar-collapse { border-top-color: #ccd6d9; }
+}
+@media (max-width: 767px) {
+  html[data-theme="light"] .hero-shade { background: linear-gradient(90deg, #edf1f1ed, #edf1f1bf), linear-gradient(0deg, #edf1f1b3, transparent 45%); }
+  html[data-theme="light"] .hero-bottom > span:last-child { color: #344b5c; }
+}

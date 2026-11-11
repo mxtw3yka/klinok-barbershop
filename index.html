@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#142438" />
+    <meta
+      name="description"
+      content="Клинок — барбершоп с характером. Стрижки, оформление бороды и бритьё. Выберите услугу, мастера и удобное время для заявки."
+    />
+    <title>Клинок — барбершоп</title>
+    <script>
+      try {
+        const requested = new URLSearchParams(location.search).get("theme");
+        document.documentElement.dataset.theme =
+          requested === "light" || requested === "dark"
+            ? requested
+            : localStorage.getItem("klinok-theme") === "light" ? "light" : "dark";
+      } catch {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="footer-map.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" id="top">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        aria-label="Основная навигация"
+      >
+        <div class="header-inner shell container-fluid">
+          <a
+            class="brand navbar-brand"
+            href="index.html"
+            aria-label="Клинок — на главную"
+            ><span class="brand-mark" aria-hidden="true"
+              ><span></span><span></span></span
+            ><span class="brand-type"
+              ><strong>КЛИНОК</strong><small>барбершоп</small></span
+            ></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav primary-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог услуг</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Стрижка + борода</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="masters.html">Мастера</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Запись</a>
+              </li>
+            </ul>
+            <a class="header-book" href="order.html"
+              >Записаться <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div
+          class="hero-image"
+          role="img"
+          aria-label="Барбер подравнивает бороду клиенту ножницами"
+        ></div>
+        <div class="hero-shade"></div>
+        <div class="hero-inner shell">
+          <div class="hero-copy">
+            <p class="hero-intro">Барбершоп для тех, кто ценит детали</p>
+            <h1 id="hero-title">
+              ТОЧНОСТЬ<br />В КАЖДОЙ<br /><span>ЛИНИИ.</span>
+            </h1>
+            <p class="hero-description">
+              Стрижка, бритьё и уход без лишнего шума. Найдём форму, которая
+              работает на тебя.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-light" href="order.html"
+                >Выбрать время <span aria-hidden="true">↗</span></a
+              >
+              <a class="text-link" href="catalog.html"
+                >Смотреть услуги <span aria-hidden="true">↓</span></a
+              >
+            </div>
+          </div>
+          <div class="hero-rail" aria-hidden="true">
+            <span>ФОРМА. ХАРАКТЕР. ТОЧНОСТЬ.</span
+            ><span class="rail-line"></span><span>01 / КЛИНОК</span>
+          </div>
+        </div>
+        <div class="hero-bottom shell">
+          <span>ТВОЙ СТИЛЬ — НАША РАБОТА</span
+          ><span>Листай ниже <span aria-hidden="true">↓</span></span>
+        </div>
+      </section>
+
+      <section
+        class="services section-pad"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="shell">
+          <div class="section-heading services-heading">
+            <div>
+              <p class="section-kicker">Каталог услуг</p>
+              <h2 id="services-title">Всё по делу.<br />Ничего лишнего.</h2>
+            </div>
+            <p>
+              От точной формы до чистого бритья. Выбирай то, что нужно сейчас.
+            </p>
+          </div>
+          <div class="service-list">
+            <article class="service-item">
+              <div class="service-number">01</div>
+              <div class="service-main">
+                <h3>Мужская стрижка</h3>
+                <p>Подберём форму, выстроим силуэт, уложим.</p>
+              </div>
+              <div class="service-meta">
+                <span>60 минут</span><strong>1 800 ₽</strong>
+              </div>
+              <button
+                class="service-pick"
+                type="button"
+                data-service="haircut"
+                aria-label="Выбрать мужскую стрижку"
+              >
+                ↗
+              </button>
+            </article>
+            <article class="service-item">
+              <div class="service-number">02</div>
+              <div class="service-main">
+                <h3>Оформление бороды</h3>
+                <p>Чёткий контур и аккуратная длина.</p>
+              </div>
+              <div class="service-meta">
+                <span>40 минут</span><strong>1 200 ₽</strong>
+              </div>
+              <button
+                class="service-pick"
+                type="button"
+                data-service="beard"
+                aria-label="Выбрать оформление бороды"
+              >
+                ↗
+              </button>
+            </article>
+            <article class="service-item">
+              <div class="service-number">03</div>
+              <div class="service-main">
+                <h3>Стрижка + борода</h3>
+                <p>Полное обновление за один визит.</p>
+              </div>
+              <div class="service-meta">
+                <span>90 минут</span><strong>2 600 ₽</strong>
+              </div>
+              <button
+                class="service-pick"
+                type="button"
+                data-service="combo"
+                aria-label="Выбрать стрижку и бороду"
+              >
+                ↗
+              </button>
+            </article>
+            <article class="service-item">
+              <div class="service-number">04</div>
+              <div class="service-main">
+                <h3>Королевское бритьё</h3>
+                <p>Горячее полотенце, опасная бритва, гладкий результат.</p>
+              </div>
+              <div class="service-meta">
+                <span>45 минут</span><strong>1 500 ₽</strong>
+              </div>
+              <button
+                class="service-pick"
+                type="button"
+                data-service="shave"
+                aria-label="Выбрать королевское бритьё"
+              >
+                ↗
+              </button>
+            </article>
+          </div>
+          <p class="services-note">
+            Цены и профили — демонстрационный контент учебного проекта.
+          </p>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-photo">
+          <img
+            src="assets/craft.jpg"
+            alt="Инструменты барбера: машинки, ножницы и расчёска"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-content">
+          <div class="about-content-inner">
+            <p class="section-kicker">Наш подход</p>
+            <h2 id="about-title">
+              Хорошая стрижка<br />не требует <em>объяснений.</em>
+            </h2>
+            <p>
+              Мы смотрим на форму лица, структуру волос и привычный ритм жизни.
+              Потом берём инструмент и делаем ровно то, что подходит тебе — без
+              шаблонов и спешки.
+            </p>
+            <div class="about-signature">
+              <span class="signature-line"></span
+              ><span>Внимание к форме.<br />Уважение к человеку.</span>
+            </div>
+            <a class="text-link" href="#masters"
+              >Познакомиться с мастерами <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="masters section-pad"
+        id="masters"
+        aria-labelledby="masters-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Мастера</p>
+              <h2 id="masters-title">Своё дело —<br />в надёжных руках.</h2>
+            </div>
+            <p>
+              У каждого свой почерк. Выбери мастера, с которым хочется начать.
+            </p>
+          </div>
+          <div class="master-grid">
+            <article class="master-card">
+              <div class="master-art master-art-one" aria-hidden="true">
+                <span class="master-initial">А</span
+                ><span class="master-art-line"></span>
+              </div>
+              <div class="master-info">
+                <div>
+                  <h3>Артём</h3>
+                  <p>Классика и точные формы</p>
+                </div>
+                <button
+                  type="button"
+                  class="master-pick"
+                  data-barber="artem"
+                  aria-label="Записаться к Артёму"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+            <article class="master-card">
+              <div class="master-art master-art-two" aria-hidden="true">
+                <span class="master-initial">Д</span
+                ><span class="master-art-line"></span>
+              </div>
+              <div class="master-info">
+                <div>
+                  <h3>Даниил</h3>
+                  <p>Фейды и текстура</p>
+                </div>
+                <button
+                  type="button"
+                  class="master-pick"
+                  data-barber="daniil"
+                  aria-label="Записаться к Даниилу"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+            <article class="master-card">
+              <div class="master-art master-art-three" aria-hidden="true">
+                <span class="master-initial">М</span
+                ><span class="master-art-line"></span>
+              </div>
+              <div class="master-info">
+                <div>
+                  <h3>Макс</h3>
+                  <p>Борода и бритьё</p>
+                </div>
+                <button
+                  type="button"
+                  class="master-pick"
+                  data-barber="maks"
+                  aria-label="Записаться к Максу"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="works section-pad"
+        id="works"
+        aria-labelledby="works-title"
+      >
+        <div class="shell">
+          <div class="section-heading works-heading">
+            <div>
+              <p class="section-kicker">Примеры образов</p>
+              <h2 id="works-title">Результат видно<br />без слов.</h2>
+            </div>
+            <p>
+              Несколько направлений, в которых мы работаем. Фото иллюстративные
+              — свой образ подберём лично.
+            </p>
+          </div>
+          <div class="work-grid">
+            <button
+              class="work-tile work-tile-large"
+              type="button"
+              data-image="assets/work-1.jpg"
+              data-caption="Работа с формой и текстурой"
+              aria-label="Открыть фото: работа с формой и текстурой"
+            >
+              <img
+                src="assets/work-1.jpg"
+                alt="Барбер работает над мужской стрижкой"
+                loading="lazy"
+              /><span>Форма и текстура <span aria-hidden="true">↗</span></span>
+            </button>
+            <button
+              class="work-tile"
+              type="button"
+              data-image="assets/work-2.jpg"
+              data-caption="Чёткий контур бороды"
+              aria-label="Открыть фото: чёткий контур бороды"
+            >
+              <img
+                src="assets/work-2.jpg"
+                alt="Барбер оформляет контур бороды"
+                loading="lazy"
+              /><span>Контур бороды <span aria-hidden="true">↗</span></span>
+            </button>
+            <button
+              class="work-tile"
+              type="button"
+              data-image="assets/work-3.jpg"
+              data-caption="Классическая мужская стрижка"
+              aria-label="Открыть фото: классическая мужская стрижка"
+            >
+              <img
+                src="assets/work-3.jpg"
+                alt="Мастер стрижёт клиента в барбершопе"
+                loading="lazy"
+              /><span>Классика <span aria-hidden="true">↗</span></span>
+            </button>
+            <button
+              class="work-tile"
+              type="button"
+              data-image="assets/work-4.jpg"
+              data-caption="Внимание к каждой детали"
+              aria-label="Открыть фото: внимание к каждой детали"
+            >
+              <img
+                src="assets/work-4.jpg"
+                alt="Деталь процесса стрижки"
+                loading="lazy"
+              /><span>Детали <span aria-hidden="true">↗</span></span>
+            </button>
+            <button
+              class="work-tile"
+              type="button"
+              data-image="assets/work-5.jpg"
+              data-caption="Инструменты мастера"
+              aria-label="Открыть фото: инструменты мастера"
+            >
+              <img
+                src="assets/work-5.jpg"
+                alt="Инструменты для мужской стрижки"
+                loading="lazy"
+              /><span>Инструменты <span aria-hidden="true">↗</span></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="booking section-pad"
+        id="booking"
+        aria-labelledby="booking-title"
+      >
+        <div class="shell booking-layout">
+          <div class="booking-copy">
+            <p class="section-kicker">Запись</p>
+            <h2 id="booking-title">ТВОЙ ХОД.</h2>
+            <p>
+              Выбери услугу, мастера и время — посмотри, как устроена форма
+              записи.
+            </p>
+            <div class="booking-detail">
+              <span class="detail-dash" aria-hidden="true"></span
+              ><span>Форма показывает процесс записи; для визита позвони нам.</span>
+            </div>
+          </div>
+          <div class="booking-panel">
+            <span class="booking-panel-index">КЛИНОК / ЗАПИСЬ</span>
+            <div class="booking-panel-mark" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <p>Чёткий план<br />на хороший день.</p>
+            <a class="button button-light" href="order.html"
+              >Выбрать время <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="location-section" id="location" aria-labelledby="location-title">
+        <div class="shell">
+          <div class="location-grid">
+            <div class="location-copy">
+              <h2 id="location-title">Как нас найти</h2>
+              <address class="location-address">Москва, Малая Филёвская улица, 18</address>
+              <p>Точка на карте отмечает указанный адрес.</p>
+              <a href="https://yandex.ru/maps/?ll=37.4683842%2C55.7371214&amp;mode=routes&amp;rtext=~55.7371214%2C37.4683842&amp;rtt=auto&amp;z=16" target="_blank" rel="noopener noreferrer">Построить маршрут</a>
+            </div>
+            <div class="location-map">
+              <iframe
+                title="Клинок на карте: Москва, Малая Филёвская улица, 18"
+                src="https://yandex.ru/map-widget/v1/?ll=37.4683842%2C55.7371214&amp;z=16&amp;pt=37.4683842%2C55.7371214%2Cpm2rdm"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer site-footer" id="contacts">
+      <div class="shell">
+        <div class="footer-top">
+          <div class="footer-identity">
+            <a class="brand footer-brand" href="index.html" aria-label="Клинок — на главную"
+              ><span class="brand-mark" aria-hidden="true"><span></span><span></span></span
+              ><span class="brand-type"><strong>КЛИНОК</strong><small>барбершоп</small></span></a>
+            <p>Форма имеет значение.</p>
+          </div>
+          <nav class="footer-links" aria-label="Навигация внизу страницы">
+            <h2>Разделы</h2>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Услуги</a>
+            <a href="product.html">Стрижка + борода</a>
+            <a href="masters.html">Мастера</a>
+            <a href="order.html">Запись</a>
+          </nav>
+          <div class="footer-contact">
+            <h2>Контакты</h2>
+            <p>Телефон: <a href="tel:+74951202200">+7 (495) 120-22-00</a></p>
+            <p>Почта: <a href="mailto:hello@blade.ru">hello@blade.ru</a></p>
+          </div>
+          <div class="footer-address footer-visit-card">
+            <h2>Клинок — барбершоп</h2>
+            <p>Москва, Малая Филёвская улица, 18</p>
+            <p>Мужские стрижки и бритьё</p>
+            <p>Посещение — по предварительной записи</p>
+            <a class="footer-map-link" href="index.html#location">Посмотреть на карте</a>
+            <a class="footer-cta" href="tel:+74951202200">Записаться на стрижку</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Клинок. Все права защищены.</span>
+          <a href="#top">Наверх ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      type="button"
+      aria-label="Вернуться наверх"
+    >
+      ↑
+    </button>
+    <dialog
+      class="gallery-dialog"
+      id="gallery-dialog"
+      aria-label="Просмотр фотографии"
+    >
+      <button
+        class="gallery-close"
+        type="button"
+        aria-label="Закрыть фотографию"
+      >
+        ×</button
+      ><img src="" alt="" />
+      <p id="gallery-caption"></p>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-prev" aria-label="Предыдущее фото">
+          ←</button
+        ><button type="button" class="gallery-next" aria-label="Следующее фото">
+          →
+        </button>
+      </div>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
