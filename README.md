@@ -23,6 +23,8 @@
 
 Фотографии сайта хранятся локально в `assets/`, поэтому изображения не зависят от внешних фотосервисов. Bootstrap и шрифты загружаются через CDN.
 
+Снимки в карточках мастеров иллюстративные, а не фотографии реальных сотрудников. Источники на Unsplash: [Артём](https://unsplash.com/photos/barber-standing-near-barber-poles-in-a-shop-l1ItHRx3rCo), [Даниил](https://unsplash.com/photos/barber-cutting-hair-in-shop-7k72BqGO1B8), [Макс](https://unsplash.com/photos/a-man-getting-his-hair-cut-by-a-barber-s39WI0TsuNo).
+
 ## Контакты
 
 - Телефон: +7 (495) 120-22-00

@@ -448,27 +448,18 @@ body.inner-page :focus-visible {
   background: var(--blade-ink);
 }
 .inner-page .master-portrait img {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center 30%;
   filter: grayscale(100%);
-  opacity: 0.85;
 }
 .inner-page .master-portrait:after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(transparent 48%, #0b17268c);
-}
-.inner-page .master-portrait span {
-  position: absolute;
-  z-index: 1;
-  bottom: 1rem;
-  left: 1.4rem;
-  color: #fff;
-  font:
-    500 4.5rem/0.9 Oswald,
-    sans-serif;
 }
 .inner-page .master-copy {
   padding: 1.65rem;
@@ -773,32 +764,6 @@ body.inner-page :focus-visible {
   margin-top: 1rem;
   max-width: 27rem;
   color: var(--blade-steel);
-}
-.inner-page .master-portrait {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  isolation: isolate;
-}
-.inner-page .master-portrait:before {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border: 1px solid #ffffff61;
-  transform: rotate(45deg);
-}
-.inner-page .master-portrait:after {
-  background: linear-gradient(135deg, #ffffff10, transparent);
-}
-.inner-page .master-portrait span {
-  position: relative;
-  bottom: auto;
-  left: auto;
-  font-size: 11rem;
-  line-height: 1;
-  color: #eef2f0;
-  text-shadow: 8px 8px #0b172650;
 }
 .inner-page .portrait-artem {
   background: #203a50;
