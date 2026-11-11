@@ -31,6 +31,11 @@ html[data-theme="light"] body,
 html[data-theme="light"] body.inner-page { background: #f5f7f6; color: #142438; }
 html[data-theme="light"] .site-header,
 html[data-theme="light"] .inner-page .site-header { background: #f5f7f6; color: #142438; border-bottom-color: #c9d3d6; }
+html[data-theme="light"] .site-header .hours-strip {
+  background: #e3e9e9;
+  border-bottom-color: #c9d3d6;
+  color: #344b5c;
+}
 html[data-theme="light"] .site-header .brand,
 html[data-theme="light"] .inner-page .site-header .brand { color: #142438 !important; }
 html[data-theme="light"] .site-header .brand-mark span,

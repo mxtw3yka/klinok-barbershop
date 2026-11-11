@@ -78,6 +78,20 @@ img {
   color: #f2f3f0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
+.site-header .hours-strip {
+  background: #0b1726;
+  border-bottom: 1px solid #31465b;
+  color: #cbd4d7;
+}
+.site-header .hours-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 32px;
+  margin-bottom: 0;
+  padding-block: 5px;
+  font: 500 12px/1.4 var(--body);
+}
 .site-header .navbar {
   min-height: 78px;
   padding: 0;
@@ -926,6 +940,12 @@ img {
   }
   .booking-layout {
     gap: 6%;
+  }
+}
+@media (max-width: 580px) {
+  .site-header .hours-strip-inner {
+    justify-content: center;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
