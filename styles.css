@@ -380,15 +380,10 @@ img {
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
-  justify-content: space-between;
   color: #c8d0d1;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.08em;
-}
-.hero-bottom span span {
-  margin-left: 8px;
-  font-size: 16px;
 }
 .section-pad {
   padding: 112px 0;
@@ -1089,11 +1084,8 @@ img {
   .hero-bottom {
     font-size: 9px;
   }
-  .hero-bottom span:first-child {
+  .hero-bottom span {
     max-width: 150px;
-  }
-  .hero-bottom span:last-child {
-    white-space: nowrap;
   }
   .section-heading h2,
   .about h2 {

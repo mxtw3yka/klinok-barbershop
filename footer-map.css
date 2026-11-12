@@ -143,12 +143,14 @@
 .site-footer .footer-contact p a:hover {
   color: #dcaaa2;
 }
-.site-footer .footer-contact .footer-contact-line {
+.site-footer .footer-contact .footer-contact-line,
+.site-footer .footer-address .footer-location-line {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
 }
-.site-footer .footer-contact-icon {
+.site-footer .footer-contact-icon,
+.site-footer .footer-location-icon {
   flex: none;
   width: 18px;
   height: 18px;
@@ -159,6 +161,12 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   color: #dcaaa2;
+}
+.site-footer .footer-call-hours {
+  display: block;
+  margin-top: 0.15rem;
+  color: #afbec8;
+  font: 400 0.78rem/1.45 var(--body, Manrope, Arial, sans-serif);
 }
 .site-footer .footer-visit-card,
 .inner-page .site-footer .footer-visit-card {

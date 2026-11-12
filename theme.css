@@ -66,7 +66,6 @@ html[data-theme="light"] .hero h1 span { -webkit-text-stroke-color: #142438; }
 html[data-theme="light"] .hero .button-light { background: #142438; color: #fff; }
 html[data-theme="light"] .hero .button-light:hover { background: #344e63; }
 html[data-theme="light"] .hero-bottom > span:first-child { color: #344b5c; }
-html[data-theme="light"] .hero-bottom > span:last-child { color: #fff; }
 html[data-theme="light"] .hero::after { background: #14243833; }
 
 html[data-theme="light"] .about { background: #f6f8f7; color: #142438; }
@@ -103,6 +102,7 @@ html[data-theme="light"] .site-footer.footer .footer-contact p,
 html[data-theme="light"] .site-footer.footer .footer-address p,
 html[data-theme="light"] .inner-page .site-footer.footer .footer-contact p { color: #344b5c; }
 html[data-theme="light"] .site-footer .footer-contact-icon { color: #9b5b52; }
+html[data-theme="light"] .site-footer .footer-call-hours { color: #536777; }
 html[data-theme="light"] .site-footer.footer .footer-contact .footer-note,
 html[data-theme="light"] .site-footer.footer .footer-address .footer-note,
 html[data-theme="light"] .inner-page .site-footer.footer .footer-contact .footer-note { color: #536777; }
@@ -158,5 +158,4 @@ html[data-theme="light"] .site-footer.footer .footer-visit-card .footer-cta:hove
 }
 @media (max-width: 767px) {
   html[data-theme="light"] .hero-shade { background: linear-gradient(90deg, #edf1f1ed, #edf1f1bf), linear-gradient(0deg, #edf1f1b3, transparent 45%); }
-  html[data-theme="light"] .hero-bottom > span:last-child { color: #344b5c; }
 }
