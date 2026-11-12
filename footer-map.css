@@ -110,8 +110,8 @@
 
 .site-footer .footer-links,
 .inner-page .site-footer .footer-links,
-.site-footer .footer-social,
-.inner-page .site-footer .footer-social,
+.site-footer .footer-contact,
+.inner-page .site-footer .footer-contact,
 .site-footer .footer-address {
   display: flex;
   flex-direction: column;
@@ -123,6 +123,7 @@
 }
 
 .site-footer .footer-links a,
+.site-footer .footer-contact p,
 .site-footer .footer-address p {
   margin: 0;
   max-width: none;
@@ -130,12 +131,38 @@
   font: 400 0.88rem/1.6 var(--body, Manrope, Arial, sans-serif);
   overflow-wrap: anywhere;
 }
+.site-footer .footer-contact p a {
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+.site-footer .footer-contact p a:hover {
+  color: #dcaaa2;
+}
+.site-footer .footer-contact .footer-contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.site-footer .footer-call-hours {
+  display: block;
+  margin-top: 0.15rem;
+  color: #afbec8;
+  font: 400 0.78rem/1.45 var(--body, Manrope, Arial, sans-serif);
+}
+.site-footer .footer-contact .footer-social-label {
+  margin: 0.5rem 0 0;
+  color: #afbec8;
+  font-size: 0.78rem;
+}
 
 .site-footer .footer-address .footer-location-line {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
 }
+.site-footer .footer-contact-icon,
 .site-footer .footer-location-icon {
   flex: none;
   width: 18px;
@@ -163,11 +190,15 @@
   flex-wrap: wrap;
   gap: 0.6rem;
 }
+.site-footer .footer-contact .social-links {
+  flex-direction: column;
+  align-items: flex-start;
+}
 .site-footer .social-link,
 .contacts-page .social-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.55rem;
   min-height: 44px;
   padding: 0.65rem 0.8rem;
@@ -176,7 +207,9 @@
   color: #fff;
   font: 700 0.82rem/1.2 var(--body, Manrope, Arial, sans-serif);
   text-decoration: none;
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: left;
+  white-space: normal;
   transition: background-color 0.2s, border-color 0.2s;
 }
 .site-footer .social-link:hover,

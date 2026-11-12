@@ -98,7 +98,12 @@ html[data-theme="light"] .location-map { background: #c6d2d5; }
 
 html[data-theme="light"] .site-footer.footer .footer-top h2 { color: #142438; }
 html[data-theme="light"] .site-footer.footer .footer-links a,
+html[data-theme="light"] .site-footer.footer .footer-contact p,
+html[data-theme="light"] .inner-page .site-footer.footer .footer-contact p,
 html[data-theme="light"] .site-footer.footer .footer-address p { color: #344b5c; }
+html[data-theme="light"] .site-footer .footer-contact-icon { color: #9b5b52; }
+html[data-theme="light"] .site-footer .footer-call-hours { color: #536777; }
+html[data-theme="light"] .site-footer.footer .footer-contact .footer-social-label { color: #536777; }
 html[data-theme="light"] .site-footer.footer .footer-map-link { color: #374f60; }
 html[data-theme="light"] .site-footer.footer .footer-map-link:hover { color: #a65c52; }
 html[data-theme="light"] .site-footer.footer .footer-cta,

@@ -932,11 +932,11 @@ body.contacts-page .contacts-visit a:not(.social-link) {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.contacts-page .contacts-share {
+.contacts-page .contacts-social {
   padding-left: clamp(1.5rem, 4vw, 3rem);
   border-left: 1px solid #637584;
 }
-.contacts-page .contacts-share p {
+.contacts-page .contacts-social p {
   max-width: 21rem;
 }
 @media (max-width: 760px) {
@@ -946,7 +946,7 @@ body.contacts-page .contacts-visit a:not(.social-link) {
   .contacts-page .contacts-visit-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .contacts-page .contacts-share {
+  .contacts-page .contacts-social {
     padding: 2rem 0 0;
     border-left: 0;
     border-top: 1px solid #637584;
