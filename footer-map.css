@@ -293,16 +293,6 @@
     gap: 2rem;
   }
 
-  .site-footer .footer-bottom,
-  .inner-page .site-footer .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.65rem;
-  }
-  .site-footer .footer-bottom a {
-    margin-left: 0;
-  }
-
   .location-section {
     padding-block: 3rem;
   }

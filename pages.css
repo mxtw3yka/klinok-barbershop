@@ -609,34 +609,10 @@ body.inner-page :focus-visible {
   font-size: 0.88rem;
 }
 .inner-page .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
   border-top: 1px solid #ffffff36;
   padding-top: 1.5rem;
   color: #a9bac6;
   font-size: 0.78rem;
-}
-.inner-page .back-to-top {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 30;
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid var(--blade-brass);
-  background: var(--blade-ink);
-  color: #fff;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
-.inner-page .back-to-top.visible,
-.inner-page .back-to-top.is-visible {
-  opacity: 1;
-  pointer-events: auto;
 }
 @media (max-width: 991px) {
   .inner-page .navbar-collapse {
@@ -702,7 +678,6 @@ body.inner-page :focus-visible {
   html {
     scroll-behavior: auto;
   }
-  .inner-page .back-to-top,
   .inner-page .action-link {
     transition: none;
   }
