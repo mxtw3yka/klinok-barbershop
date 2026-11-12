@@ -26,6 +26,8 @@
 
 Снимки в карточках мастеров иллюстративные, а не фотографии реальных сотрудников. Источники на Unsplash: [Артём](https://unsplash.com/photos/barber-standing-near-barber-poles-in-a-shop-l1ItHRx3rCo), [Даниил](https://unsplash.com/photos/barber-cutting-hair-in-shop-7k72BqGO1B8), [Макс](https://unsplash.com/photos/a-man-getting-his-hair-cut-by-a-barber-s39WI0TsuNo).
 
+SVG-значки Telegram и VK взяты из [Simple Icons](https://simpleicons.org/) (CC0) и сохранены в `assets/`. Кнопки в футере и на странице контактов открывают публикацию ссылки на сайт, а не профили барбершопа.
+
 ## Контакты
 
 - Телефон: +7 (495) 120-22-00

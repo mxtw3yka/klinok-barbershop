@@ -598,8 +598,7 @@ body.inner-page :focus-visible {
 .inner-page .footer-brand {
   margin-bottom: 1.3rem;
 }
-.inner-page .footer-top p,
-.inner-page .footer-contact span {
+.inner-page .footer-top p {
   color: #bcc9d2;
   font-size: 0.88rem;
 }
@@ -608,14 +607,6 @@ body.inner-page :focus-visible {
   align-content: start;
   gap: 0.6rem;
   font-size: 0.88rem;
-}
-.inner-page .footer-contact {
-  display: grid;
-  align-content: start;
-  gap: 0.6rem;
-}
-.inner-page .footer-contact a {
-  font-weight: 800;
 }
 .inner-page .footer-bottom {
   display: flex;
@@ -697,17 +688,11 @@ body.inner-page :focus-visible {
   .inner-page .footer-top {
     grid-template-columns: 1fr 1fr;
   }
-  .inner-page .footer-contact {
-    grid-column: 1/-1;
-  }
 }
 @media (max-width: 575px) {
   .inner-page .form-pair,
   .inner-page .footer-top {
     grid-template-columns: 1fr;
-  }
-  .inner-page .footer-contact {
-    grid-column: auto;
   }
   .inner-page .master-card {
     grid-template-rows: 310px 1fr;
@@ -917,9 +902,54 @@ body.contacts-page .contacts-list a {
 body.contacts-page .location-copy a {
   color: #f0c2b9;
 }
+.contacts-page .contacts-visit {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+  background: #142438;
+  color: #f1f3f2;
+}
+.contacts-page .contacts-visit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+}
+.contacts-page .contacts-visit h2 {
+  margin: 0 0 1.5rem;
+  font: 500 clamp(2.8rem, 5vw, 4.5rem)/1.05 var(--display);
+  text-transform: uppercase;
+}
+.contacts-page .contacts-visit h3 {
+  margin: 0 0 0.75rem;
+  font: 500 1.7rem/1.2 var(--display);
+}
+.contacts-page .contacts-visit p {
+  max-width: 38rem;
+  margin: 0 0 1rem;
+  color: #cbd4d7;
+}
+body.contacts-page .contacts-visit a:not(.social-link) {
+  color: #f0c2b9;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.contacts-page .contacts-share {
+  padding-left: clamp(1.5rem, 4vw, 3rem);
+  border-left: 1px solid #637584;
+}
+.contacts-page .contacts-share p {
+  max-width: 21rem;
+}
 @media (max-width: 760px) {
   .contacts-page .contacts-details-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .contacts-page .contacts-visit-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contacts-page .contacts-share {
+    padding: 2rem 0 0;
+    border-left: 0;
+    border-top: 1px solid #637584;
   }
 }
 @media (max-width: 480px) {
