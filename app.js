@@ -61,7 +61,7 @@ if (location.protocol === "file:") {
   document.addEventListener("click", (event) => {
     const link = event.target.closest?.("a[href]");
     const href = link?.getAttribute("href");
-    if (!href || !/^(?:index|catalog|product|masters|order)\.html(?:[?#]|$)/.test(href)) return;
+    if (!href || !/^(?:index|catalog|product|masters|order|contacts)\.html(?:[?#]|$)/.test(href)) return;
     const url = new URL(href, location.href);
     url.searchParams.set("theme", document.documentElement.dataset.theme);
     link.href = url.href;
