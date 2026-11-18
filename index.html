@@ -33,7 +33,9 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="footer-map.css" />
     <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="before-after.css" />
     <script src="app.js" defer></script>
+    <script src="before-after.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -412,6 +414,64 @@
                 loading="lazy"
               /><span>Инструменты <span aria-hidden="true">↗</span></span>
             </button>
+          </div>
+          <div class="before-after" aria-labelledby="before-after-title">
+            <div class="before-after-copy">
+              <h3 id="before-after-title">Один человек.<br />Другая форма.</h3>
+              <p>
+                Сравните образ до и после бритья головы: другая длина меняет
+                силуэт.
+              </p>
+              <p class="before-after-note">
+                Фото одного человека, не работа «Клинка». Снимки: сестра
+                necronwarrior —
+                <a href="https://commons.wikimedia.org/wiki/File:Front_view_of_man_with_male-pattern_baldness_before_a_haircut_posted_in_the_Bald_subreddit.jpg" target="_blank" rel="noopener noreferrer">до</a>
+                и
+                <a href="https://commons.wikimedia.org/wiki/File:Front_view_of_a_man_with_a_newly-shaved_head_posted_in_the_Bald_subreddit.jpg" target="_blank" rel="noopener noreferrer">после</a>;
+                кадрированы, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.
+              </p>
+            </div>
+            <div class="before-after-demo">
+              <figure class="before-after-figure">
+                <div class="before-after-frame" style="--reveal: 50%">
+                  <img
+                    class="before-after-image"
+                    src="assets/haircut-before.jpg"
+                    alt="До: мужчина с длинными редеющими волосами и бородой"
+                    width="1530"
+                    height="2040"
+                    loading="lazy"
+                  />
+                  <img
+                    class="before-after-image before-after-image-after"
+                    src="assets/haircut-after.jpg"
+                    alt="После: тот же мужчина с бритой головой и бородой"
+                    width="1536"
+                    height="2040"
+                    loading="lazy"
+                  />
+                  <span class="before-after-divider" aria-hidden="true"></span>
+                </div>
+                <figcaption class="before-after-legend">
+                  <span>До</span><span>После</span>
+                </figcaption>
+              </figure>
+              <label class="before-after-label" for="before-after-range">
+                Сдвигайте линию, чтобы сравнить
+              </label>
+              <input
+                class="before-after-range"
+                id="before-after-range"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-describedby="before-after-hint"
+              />
+              <p class="before-after-hint" id="before-after-hint">
+                Перетаскивайте линию на фото, нажимайте на шкалу или используйте стрелки клавиатуры.
+              </p>
+            </div>
           </div>
         </div>
       </section>

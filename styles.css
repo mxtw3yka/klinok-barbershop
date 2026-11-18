@@ -21,6 +21,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 82px;
 }
+:target {
+  scroll-margin-top: 130px;
+}
 body {
   margin: 0;
   background: var(--paper);
@@ -41,6 +44,20 @@ a {
 }
 button {
   cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: url("assets/cursor-blade.svg") 1 1, auto;
+  }
+  a, button, select, summary, [role="button"] {
+    cursor: url("assets/cursor-blade.svg") 1 1, pointer;
+  }
+  input, textarea, [contenteditable="true"] {
+    cursor: text;
+  }
+  input[type="range"] {
+    cursor: ew-resize;
+  }
 }
 img {
   max-width: 100%;
@@ -158,6 +175,39 @@ img {
 }
 .site-header .navbar-collapse {
   gap: 28px;
+}
+.site-header .header-tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+}
+.site-header .header-utility {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #637584;
+  color: #e9eeed;
+  text-decoration: none;
+}
+.site-header .header-utility:hover {
+  background: #ffffff1a;
+  color: #fff;
+}
+.site-header .header-utility[aria-current="page"] {
+  border-color: var(--accent);
+}
+.site-header .header-utility svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .primary-nav {
   align-items: center;
@@ -891,6 +941,9 @@ img {
     padding: 16px 0 23px;
     border-top: 1px solid #31465b;
     margin-top: 10px;
+  }
+  .site-header .header-tools {
+    margin-top: 13px;
   }
   .primary-nav {
     align-items: flex-start;

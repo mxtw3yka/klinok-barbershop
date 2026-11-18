@@ -25,7 +25,25 @@ if (themeTarget) {
   themeButton.innerHTML =
     '<svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg><span class="theme-toggle-text"></span>';
   const bookingLink = themeTarget.querySelector(".header-book, .nav-book");
-  themeTarget.insertBefore(themeButton, bookingLink);
+  const headerTools = document.createElement("div");
+  headerTools.className = "header-tools";
+  const searchLink = document.createElement("a");
+  searchLink.className = "header-utility";
+  searchLink.href = "search.html";
+  searchLink.setAttribute("aria-label", "Поиск по услугам и мастерам");
+  searchLink.title = "Поиск";
+  searchLink.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>';
+  const cabinetLink = document.createElement("a");
+  cabinetLink.className = "header-utility";
+  cabinetLink.href = "cabinet.html";
+  cabinetLink.setAttribute("aria-label", "Личный кабинет");
+  cabinetLink.title = "Личный кабинет";
+  cabinetLink.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c.5-4.5 3.3-6.7 8-6.7s7.5 2.2 8 6.7"/></svg>';
+  const page = location.pathname.split("/").pop();
+  if (page === "search.html") searchLink.setAttribute("aria-current", "page");
+  if (page === "cabinet.html") cabinetLink.setAttribute("aria-current", "page");
+  headerTools.append(searchLink, cabinetLink, themeButton);
+  themeTarget.insertBefore(headerTools, bookingLink);
 
   const syncTheme = () => {
     const light = document.documentElement.dataset.theme === "light";
@@ -56,14 +74,29 @@ if (themeTarget) {
   });
 }
 
+const cabinetStyles = document.createElement("link");
+cabinetStyles.rel = "stylesheet";
+cabinetStyles.href = "cabinet.css";
+document.head.append(cabinetStyles);
+const cabinetScript = document.createElement("script");
+cabinetScript.src = "cabinet.js";
+document.head.append(cabinetScript);
+
 // File-opened pages can have separate storage origins. Carry the choice in local links.
 if (location.protocol === "file:") {
   document.addEventListener("click", (event) => {
     const link = event.target.closest?.("a[href]");
     const href = link?.getAttribute("href");
-    if (!href || !/^(?:index|catalog|product|masters|order|contacts)\.html(?:[?#]|$)/.test(href)) return;
+    if (!href) return;
     const url = new URL(href, location.href);
+    const directory = location.pathname.slice(0, location.pathname.lastIndexOf("/") + 1);
+    const page = url.pathname.slice(directory.length);
+    if (url.protocol !== "file:" || !url.pathname.startsWith(directory) ||
+        !/^(?:index|catalog|product|masters|order|contacts|search|cabinet)\.html$/.test(page)) return;
     url.searchParams.set("theme", document.documentElement.dataset.theme);
+    const saved = new URLSearchParams(location.search).get("saved");
+    if (saved) url.searchParams.set("saved", saved);
+    else url.searchParams.delete("saved");
     link.href = url.href;
   }, true);
 }
@@ -75,7 +108,11 @@ for (const button of document.querySelectorAll(
     const params = new URLSearchParams();
     if (button.dataset.service) params.set("service", button.dataset.service);
     if (button.dataset.barber) params.set("barber", button.dataset.barber);
-    if (location.protocol === "file:") params.set("theme", document.documentElement.dataset.theme);
+    if (location.protocol === "file:") {
+      params.set("theme", document.documentElement.dataset.theme);
+      const saved = new URLSearchParams(location.search).get("saved");
+      if (saved) params.set("saved", saved);
+    }
     window.location.href = `order.html?${params}`;
   });
 }

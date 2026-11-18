@@ -10,6 +10,8 @@
 - `catalog.html` — услуги и цены;
 - `product.html` — услуга «Стрижка + борода»;
 - `masters.html` — мастера;
+- `search.html` — поиск по услугам и мастерам;
+- `cabinet.html` — локальный кабинет с избранным;
 - `contacts.html` — контакты и карта проезда;
 - `order.html` — демонстрационная форма записи.
 
@@ -20,11 +22,21 @@
 - CSS3;
 - JavaScript.
 
+## Возможности
+
+- Светлая и тёмная тема переключаются с анимацией; при настройке «уменьшить движение» анимация отключается.
+- Поиск фильтрует услуги и мастеров прямо в браузере.
+- Слайдер «до/после» на главной сравнивает два снимка одного человека до и после бритья головы; линию можно перетаскивать прямо на фото, регулировать шкалой или клавиатурой. Это не работа барбершопа «Клинок».
+- Личный кабинет хранит только избранные услуги и мастеров в этом браузере, без регистрации, синхронизации и сохранения заявок.
+- Стилизованный курсор-клинок показывается на устройствах с точным указателем; поля ввода сохраняют обычный текстовый курсор.
+
 ## Медиа
 
 Фотографии сайта хранятся локально в `assets/`, поэтому изображения не зависят от внешних фотосервисов. Bootstrap и шрифты загружаются через CDN.
 
 Снимки в карточках мастеров иллюстративные, а не фотографии реальных сотрудников. Источники на Unsplash: [Артём](https://unsplash.com/photos/barber-standing-near-barber-poles-in-a-shop-l1ItHRx3rCo), [Даниил](https://unsplash.com/photos/barber-cutting-hair-in-shop-7k72BqGO1B8), [Макс](https://unsplash.com/photos/a-man-getting-his-hair-cut-by-a-barber-s39WI0TsuNo).
+
+Фото сравнения лежат в `assets/haircut-before.jpg` и `assets/haircut-after.jpg`. Автор снимков — сестра пользователя necronwarrior; источники: [до](https://commons.wikimedia.org/wiki/File:Front_view_of_man_with_male-pattern_baldness_before_a_haircut_posted_in_the_Bald_subreddit.jpg), [после](https://commons.wikimedia.org/wiki/File:Front_view_of_a_man_with_a_newly-shaved_head_posted_in_the_Bald_subreddit.jpg). Лицензия — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); на сайте кадрирование выполнено средствами CSS. Курсор — в `assets/cursor-blade.svg`.
 
 SVG-значки Telegram и VK взяты из [Simple Icons](https://simpleicons.org/) (CC0) и сохранены в `assets/`. Пока нет точных ссылок на соцсети барбершопа, кнопки в футере и на странице контактов ведут в поиск Яндекса по его названию.
 
